@@ -1,0 +1,177 @@
+.todo-list {
+  .container {
+    padding: $gap 150px;
+    text-align: center;
+    user-select: none;
+    h1 {
+      padding: $gap 0;
+    }
+    .error {
+      padding-bottom: $gap;
+      p {
+        background-color: $error;
+        color: $errorColor;
+        width: fit-content;
+        margin: 0 auto;
+        border-radius: $radius;
+        border: 1px solid $error;
+        padding: 5px 10px;
+      }
+    }
+    .setTasks {
+      background-color: $gray;
+      padding: $gap;
+      margin-bottom: $gap;
+      display: flex;
+      align-items: center;
+      gap: $gap;
+      flex-flow: row nowrap;
+      border-radius: $radius;
+      input[type="text"] {
+        padding: 10px 15px;
+        background-color: white;
+        width: 70%;
+        border-radius: $radius;
+        border: none;
+        outline: none;
+        &:focus {
+          outline: 1px solid $color;
+        }
+      }
+      input[type="submit"] {
+        cursor: pointer;
+        background-color: $color;
+        color: white;
+        font-weight: bold - 100;
+        width: 30%;
+        border: none;
+        border-radius: $radius;
+        padding: 10px 15px;
+      }
+    }
+    .update-form {
+      background-color: $gray;
+      padding: $gap;
+      margin-bottom: $gap;
+      display: flex;
+      align-items: center;
+      gap: $gap;
+      flex-flow: row nowrap;
+      border-radius: $radius;
+      input[type="text"] {
+        padding: 10px 15px;
+        background-color: white;
+        width: 60%;
+        border-radius: $radius;
+        border: none;
+        outline: none;
+        &:focus {
+          outline: 1px solid $color;
+        }
+      }
+      input[type="submit"] {
+        cursor: pointer;
+        background-color: $color;
+        color: white;
+        font-weight: bold - 100;
+        width: 20%;
+        border: none;
+        border-radius: $radius;
+        padding: 10px 15px;
+      }
+      button {
+        cursor: pointer;
+        background-color: $color;
+        color: white;
+        font-weight: bold - 100;
+        width: 20%;
+        border: none;
+        border-radius: $radius;
+        padding: 10px 15px;
+      }
+    }
+    .tasks-wrapper {
+      ul {
+        border: $gap solid $gray;
+        border-radius: $radius;
+        gap: $gap;
+        background-color: $gray;
+        display: flex;
+        flex-flow: column nowrap;
+        width: 100%;
+        li {
+          border-radius: $radius;
+          padding: 10px $gap;
+          background-color: white;
+          width: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          span {
+            padding: 5px 15px;
+            margin-right: 10px;
+            border-radius: $radius;
+            background-color: $gray;
+          }
+          .control-icons {
+            ul {
+              border: 0 solid white;
+              background-color: white;
+              display: flex;
+              align-items: center;
+              gap: $radius;
+              flex-flow: row nowrap;
+              li {
+                cursor: pointer;
+                background-color: $gray;
+                padding: 10px;
+                border-radius: $radius;
+                &:hover {
+                  svg {
+                    color: $color;
+                  }
+                }
+                svg {
+                  font-size: $gap;
+                  transition: 0.1s;
+                  color: $black;
+                  &.done {
+                    color: $color;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 1000px) {
+  .todo-list {
+    .container {
+      padding: $gap 100px;
+    }
+  }
+}
+@media screen and (max-width: 800px) {
+  .todo-list {
+    .container {
+      padding: $gap 70px;
+    }
+  }
+}
+@media screen and (max-width: 700px) {
+  .todo-list {
+    .container {
+      padding: $gap 40px;
+    }
+  }
+}
+@media screen and (max-width: 500px) {
+  .todo-list {
+    .container {
+      padding: $gap 10px;
+    }
+  }
+}
